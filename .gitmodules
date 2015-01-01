@@ -13,3 +13,6 @@
 [submodule "bundle/cpp_enhanced_highlight"]
 	path = bundle/cpp_enhanced_highlight
 	url = https://github.com/octol/vim-cpp-enhanced-highlight.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
