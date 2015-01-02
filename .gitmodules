@@ -25,3 +25,6 @@
 [submodule "/home/txan/.vim/bundle/vim-airline"]
 	path = /home/txan/.vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline
+[submodule "bundle/vim-dispatch"]
+	path = bundle/vim-dispatch
+	url = git://github.com/tpope/vim-dispatch.git
