@@ -1,5 +1,6 @@
 execute pathogen#infect()
-set t_Co=256
+"set t_Co=256
+let $NVIM_TUI_ENABLE_TRUE_COLOR=0
 colorscheme jellybeans
 syntax on
 filetype plugin indent on
@@ -33,8 +34,8 @@ nnoremap <Leader>n :NERDTreeToggle<CR>
 
 " set the cursor to a vertical line in insert mode and a solid block
 " " in command mode
-let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+"let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+"let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
 " tabstop:          Width of tab character
 " softtabstop:      Fine tunes the amount of white space to be added
@@ -44,3 +45,7 @@ set tabstop    =2
 set softtabstop =2
 set shiftwidth  =2
 set expandtab
+
+"Powerline settings. Dependant on the python installation path
+let $PYTHONPATH='/usr/lib/python3.5/site-packages'
+set laststatus=2
