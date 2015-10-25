@@ -31,6 +31,8 @@ let mapleader = "\<Space>"
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>s :w<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
+nnoremap <Leader>t :TagbarToggle<CR>
+nnoremap <Leader>f :Ag 
 
 " set the cursor to a vertical line in insert mode and a solid block
 " " in command mode
@@ -49,3 +51,8 @@ set expandtab
 "Powerline settings. Dependant on the python installation path
 let $PYTHONPATH='/usr/lib/python3.5/site-packages'
 set laststatus=2
+
+" vertical line indentation
+let g:indentLine_color_term = 239
+let g:indentLine_color_gui = '#09AA08'
+let g:indentLine_char = '│'
