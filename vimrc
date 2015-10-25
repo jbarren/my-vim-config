@@ -22,10 +22,6 @@ let g:airline_powerline_fonts = 1
 "map <S-F1> :bprevious<CR> 
 "imap <S-F1> :bprevious<CR>
 
-"With these the cursor will change at insert mode
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-
 "Leader config
 let mapleader = "\<Space>"
 nnoremap <Leader>o :CtrlP<CR>
@@ -33,11 +29,6 @@ nnoremap <Leader>s :w<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>t :TagbarToggle<CR>
 nnoremap <Leader>f :Ag 
-
-" set the cursor to a vertical line in insert mode and a solid block
-" " in command mode
-"let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-"let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
 " tabstop:          Width of tab character
 " softtabstop:      Fine tunes the amount of white space to be added
