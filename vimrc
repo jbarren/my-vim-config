@@ -24,7 +24,8 @@ let g:airline_powerline_fonts = 1
 
 "Leader config
 let mapleader = "\<Space>"
-nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>o :CtrlPMixed<CR>
+nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>s :w<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>t :TagbarToggle<CR>
@@ -40,8 +41,8 @@ set shiftwidth  =2
 set expandtab
 
 "Powerline settings. Dependant on the python installation path
-let $PYTHONPATH='/usr/lib/python3.5/site-packages'
-set laststatus=2
+"let $PYTHONPATH='/usr/lib/python3.5/site-packages'
+"set laststatus=2
 
 " vertical line indentation
 let g:indentLine_color_term = 239
