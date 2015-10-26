@@ -1,3 +1,15 @@
+Since I mainly use neovim on tmux, I won't focus on testing my configuration in vim and different consoles. If somebody is using my configuration it should check out my tmux configuration as well: https://github.com/jbarren/my-tmux-config.git
+
+Update from neovim, so the symbolic links to use are different now:
+2015/10/26
+
+Neovim now supports XDG configuration. The default config paths changed, so ~/.nvimrc and ~/.nvim/ will not be found by default. See :help nvim-from-vim for quick migration steps.
+
+tl;dr:
+
+    Default user config directory is now ~/.config/nvim/
+    Default "vimrc" location is now ~/.config/nvim/init.vim
+
 Information extracted from: http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 
     Keep your dotfiles in git
