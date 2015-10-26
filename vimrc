@@ -17,11 +17,6 @@ autocmd BufLeave,FocusLost * silent! wall
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
-"map <F1> :bnext<CR>
-"imap <F1> :bnext<CR>
-"map <S-F1> :bprevious<CR> 
-"imap <S-F1> :bprevious<CR>
-
 "Leader config
 let mapleader = "\<Space>"
 nnoremap <Leader>o :CtrlPMixed<CR>
@@ -40,11 +35,19 @@ set softtabstop =2
 set shiftwidth  =2
 set expandtab
 
-"Powerline settings. Dependant on the python installation path
-"let $PYTHONPATH='/usr/lib/python3.5/site-packages'
-"set laststatus=2
-
 " vertical line indentation
 let g:indentLine_color_term = 239
 let g:indentLine_color_gui = '#09AA08'
 let g:indentLine_char = '│'
+
+"Tmux navigation shortcuts
+let g:tmux_navigator_save_on_switch = 1
+let g:tmux_navigator_no_mappings = 1 
+"nnoremap <silent> <c-H> :TmuxNavigateLeft<cr>
+"Workaround to make it work in neovim
+if has('nvim')
+  nmap <bs> :<c-u>TmuxNavigateLeft<cr>
+endif
+nnoremap <silent> <c-J> :TmuxNavigateDown<cr>
+nnoremap <silent> <c-K> :TmuxNavigateUp<cr>
+nnoremap <silent> <c-L> :TmuxNavigateRight<cr>
