@@ -25,6 +25,7 @@ nnoremap <Leader>s :w<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>t :TagbarToggle<CR>
 nnoremap <Leader>f :Ag 
+nnoremap <Leader>q <c-w>c
 
 " tabstop:          Width of tab character
 " softtabstop:      Fine tunes the amount of white space to be added
