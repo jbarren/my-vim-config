@@ -9,7 +9,7 @@ set hidden
 set switchbuf=useopen,usetab
 set laststatus=2
 set noswapfile
-
+set nobackup
 set autowrite
 set autowriteall
 autocmd BufLeave,FocusLost * silent! wall
@@ -24,14 +24,14 @@ nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>s :w<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>t :TagbarToggle<CR>
-nnoremap <Leader>f :Ag 
+nnoremap <Leader>f :Ag
 nnoremap <Leader>q <c-w>c
 
 " tabstop:          Width of tab character
 " softtabstop:      Fine tunes the amount of white space to be added
 " shiftwidth        Determines the amount of whitespace to add in normal mode
 " expandtab:        When on uses space instead of tabs
-set tabstop    =2 
+set tabstop    =2
 set softtabstop =2
 set shiftwidth  =2
 set expandtab
@@ -43,7 +43,7 @@ let g:indentLine_char = '│'
 
 "Tmux navigation shortcuts
 let g:tmux_navigator_save_on_switch = 1
-let g:tmux_navigator_no_mappings = 1 
+let g:tmux_navigator_no_mappings = 1
 "nnoremap <silent> <c-H> :TmuxNavigateLeft<cr>
 "Workaround to make it work in neovim
 if has('nvim')
