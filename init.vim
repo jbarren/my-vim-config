@@ -6,7 +6,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'rking/ag.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'Raimondi/delimitMate'
+"Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'haya14busa/incsearch.vim'
@@ -17,7 +17,9 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'easymotion/vim-easymotion'
 Plug 'sheerun/vim-polyglot'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'jszakmeister/vim-togglecursor' 
+Plug 'jszakmeister/vim-togglecursor'
+Plug 'rust-lang/rust.vim'
+Plug 'jiangmiao/auto-pairs'
 
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -37,10 +39,16 @@ set noswapfile
 set nobackup
 set autowrite
 set autowriteall
+set autoindent
+set smartindent
+set cindent
 autocmd BufLeave,FocusLost * silent! wall
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+" Rust settings
+let g:rustfmt_autosave = 1
+let g:ycm_rust_src_path = 'usr/src/rust/src'
 
 "Leader config
 let mapleader = "\<Space>"
@@ -51,6 +59,7 @@ nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>t :TagbarToggle<CR>
 nnoremap <Leader>f :Ag
 nnoremap <Leader>q <c-w>c
+nnoremap <Leader>g :YcmCompleter GoTo<CR>
 
 " tabstop:          Width of tab character
 " softtabstop:      Fine tunes the amount of white space to be added
