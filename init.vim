@@ -1,3 +1,30 @@
+"Vim plug configuration
+call plug#begin('~/.config/nvim/plugged')
+
+" Make sure you use single quotes
+Plug 'Valloric/YouCompleteMe'
+Plug 'rking/ag.vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'haya14busa/incsearch.vim'
+Plug 'Yggdroot/indentLine'
+Plug 'scrooloose/syntastic'
+Plug 'bling/vim-airline'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'easymotion/vim-easymotion'
+Plug 'sheerun/vim-polyglot'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'jszakmeister/vim-togglecursor' 
+
+" On-demand loading
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+" Add plugins to &runtimepath
+call plug#end()
+
 let $NVIM_TUI_ENABLE_TRUE_COLOR=0
 colorscheme jellybeans
 syntax on
@@ -51,30 +78,3 @@ nnoremap <silent> <c-J> :TmuxNavigateDown<cr>
 nnoremap <silent> <c-K> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-L> :TmuxNavigateRight<cr>
 
-"Vim plug configuration
-call plug#begin('~/.config/nvim/plugged')
-
-" Make sure you use single quotes
-Plug 'Valloric/YouCompleteMe'
-Plug 'rking/ag.vim'
-Plug 'flazz/vim-colorschemes'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'Raimondi/delimitMate'
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-Plug 'haya14busa/incsearch.vim'
-Plug 'Yggdroot/indentLine'
-Plug 'scrooloose/syntastic'
-Plug 'bling/vim-airline'
-Plug 'ntpeters/vim-better-whitespace'
-Plug 'easymotion/vim-easymotion'
-Plug 'sheerun/vim-polyglot'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'jszakmeister/vim-togglecursor'
-
-
-" On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-
-" Add plugins to &runtimepath
-call plug#end()
