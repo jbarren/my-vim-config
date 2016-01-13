@@ -28,7 +28,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 call plug#end()
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=0
-colorscheme jellybeans
+colorscheme distinguished
 syntax on
 filetype plugin indent on
 set number
@@ -57,9 +57,10 @@ nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>s :w<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>t :TagbarToggle<CR>
-nnoremap <Leader>f :Ag
+nnoremap <Leader>f :Ag 
 nnoremap <Leader>q <c-w>c
 nnoremap <Leader>g :YcmCompleter GoTo<CR>
+nnoremap <Leader>q :bw<CR>
 
 " tabstop:          Width of tab character
 " softtabstop:      Fine tunes the amount of white space to be added
