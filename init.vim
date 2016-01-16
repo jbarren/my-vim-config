@@ -28,7 +28,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 call plug#end()
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=0
-colorscheme distinguished
+colorscheme jellybeans
 syntax on
 filetype plugin indent on
 set number
