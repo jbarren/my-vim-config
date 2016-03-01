@@ -12,7 +12,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'haya14busa/incsearch.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'scrooloose/syntastic'
-Plug 'bling/vim-airline'
+"Plug 'bling/vim-airline'
+Plug 'itchyny/lightline.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'easymotion/vim-easymotion'
 Plug 'sheerun/vim-polyglot'
@@ -44,8 +45,29 @@ set smartindent
 set cindent
 autocmd BufLeave,FocusLost * silent! wall
 
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline_powerline_fonts = 1
+
+"lightline configuration
+let g:lightline = {
+      \ 'colorscheme': 'jellybeans',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component': {
+      \   'readonly': '%{&filetype=="help"?"":&readonly?"⭤":""}',
+      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+      \ },
+      \ 'component_visible_condition': {
+      \   'readonly': '(&filetype!="help"&& &readonly)',
+      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+      \ },
+      \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
+      \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
+      \ }
 " Rust settings
 let g:rustfmt_autosave = 1
 let g:ycm_rust_src_path = 'usr/src/rust/src'
@@ -61,6 +83,16 @@ nnoremap <Leader>f :Ag
 nnoremap <Leader>q <c-w>c
 nnoremap <Leader>g :YcmCompleter GoTo<CR>
 nnoremap <Leader>q :bw<CR>
+"Window navigation for terminal
+tnoremap <A-h> <C-\><C-n><C-w>h
+tnoremap <A-j> <C-\><C-n><C-w>j
+tnoremap <A-k> <C-\><C-n><C-w>k
+tnoremap <A-l> <C-\><C-n><C-w>l
+"Window navigation
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
 
 " tabstop:          Width of tab character
 " softtabstop:      Fine tunes the amount of white space to be added
@@ -77,14 +109,13 @@ let g:indentLine_color_gui = '#585958'
 let g:indentLine_char = '│'
 
 "Tmux navigation shortcuts
-let g:tmux_navigator_save_on_switch = 1
-let g:tmux_navigator_no_mappings = 1
-"nnoremap <silent> <c-H> :TmuxNavigateLeft<cr>
+"let g:tmux_navigator_save_on_switch = 1
+"let g:tmux_navigator_no_mappings = 1
 "Workaround to make it work in neovim
-if has('nvim')
-  nmap <bs> :<c-u>TmuxNavigateLeft<cr>
-endif
-nnoremap <silent> <c-J> :TmuxNavigateDown<cr>
-nnoremap <silent> <c-K> :TmuxNavigateUp<cr>
-nnoremap <silent> <c-L> :TmuxNavigateRight<cr>
+"if has('nvim')
+"  nmap <bs> :<C-S-u>TmuxNavigateLeft<cr>
+"endif
+"nnoremap <silent> <C-S-j> :TmuxNavigateDown<cr>
+"nnoremap <silent> <C-S-k> :TmuxNavigateUp<cr>
+"nnoremap <silent> <C-S-l> :TmuxNavigateRight<cr>
 
